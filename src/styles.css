@@ -116,7 +116,7 @@ form a:hover {
     width: 250px;
 }
 
-.logo-google{
+.logo-google {
     background-image: url('logos/image-20150902-6700-t2axrz.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -126,7 +126,7 @@ form a:hover {
     height: 50px;
 }
 
-.logo-facebook{
+.logo-facebook {
     background-image: url("logos/fb_icon_325x325.png");
     background-repeat: no-repeat;
     display: block;
