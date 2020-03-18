@@ -146,3 +146,124 @@ form a:hover {
     text-transform: uppercase;
     width: 300px;
 }
+
+.product-image-wrapper{
+    border:1px solid #F7F7F5;
+    overflow: hidden;
+    margin-bottom:30px;
+}
+
+.single-products {
+    position: relative;
+}
+
+.single-products:hover .product-overlay {
+    display:block;
+    height:100%;
+}
+
+.product-overlay .overlay-content {
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.product-overlay .add-to-cart {
+    background:#fff;
+    border: 0 none;
+    border-radius: 0;
+    color: #FE980F;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.product-overlay .add-to-cart:hover {
+    background:#fff;
+    color: #FE980F;
+}
+
+
+.product-overlay p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.features_items{
+    overflow:hidden;
+}
+
+body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+#customcanvas
+{
+    width:900px;
+    margin:100px
+    auto
+}
+
+#menucanvas
+{
+    margin-top:-5px;
+    height:65px;
+    width: 900px;
+    background-color: rgba(18, 18, 18, 1);
+}
+.button_menu
+{
+    color: #FFF;
+    background: rgba(18, 18, 18, 1);
+    padding: 15px 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 12px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #C14800;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+.button_menu:hover
+{
+    box-shadow: inset 0 100px 0 0 #C14800;
+}
