@@ -3,64 +3,100 @@
 
 <head>
     <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>PetMarket</title>
     <meta charset="utf-8">
 </head>
 <body>
-<ul>
-    <li><a class="active" href="index.html">Home</a></li>
 
-    <li><form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-  <input type="text" placeholder="Search.." name="search2">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form></li>
-
-    <li style="float:right"><a href="">Contul Meu</a></li>
-</ul>
-<div id="customcanvas">
-    <div class="image">
-        <img style='height: 100%; width: 100%; object-fit:cover' src="Data\panda2.png"</img>
+<div class="topnav">
+    <a href="#">Home</a>
+    <a href="#" style="float:right" >Contul meu</a>
+    <div class="search-container">
+        <form>
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
     </div>
-    <div id="menucanvas">
-        <div class="button_menu" style="font-weight:bold; margin-left:15px; width: 120px; background-color:#3e62c1;">
-            CAini
-        </div>
-        <div class="button_menu" style="font-weight:bold; margin-left:15px; width: 120px" onclick="navigate('');">
-            Pisici
-        </div>
-        <div class="button_menu" style="font-weight:bold; margin-left:15px; width: 120px" onclick="navigate('');">
-            Pasari
-        </div>
-        <div class="button_menu" style="font-weight:bold; margin-left:15px; width: 120px" onclick="navigate('');">
-            alte animale
-        </div>
-        <div class="button_menu" style="font-weight:bold; margin-left:15px; width: 120px" onclick="navigate('');">
-            Bibliografie
-        </div>
-    </div>
-    <table  style="padding-bottom:20px" ><tbody>
-    <td width="600px" align="center" >
-
-    <td width="33%" style="border-right: thick solid #ff0000; text-align:left; vertical-align:top">
-        <p style="color:#ff0000; font-size:20px" >Anunt 1</p>
-
-    </td>
-
-
-    <td width="33%" style="border-right: thick solid #ff0000;text-align:left; vertical-align:top">
-        <p style="color:#ff0000; font-size:20px" >Anunt 2</p>
-    </td>
-
-
-    <td width="33%" style="text-align:left; vertical-align:top" >
-        <p style="color:#ff0000; font-size:20px" >Anunt 3</p>
-    </td>
-
-
-    </td>
-    </tbody></table>
 </div>
 
+<div id="customcanvas">
+    <div class="image">
+        <img style='height: 100%; width: 100%; object-fit: contain' src="Data/82257074-cacaroot-marketing-boards.jpg"</img>
+    </div>
+    <div class="navbar2">
+        <div class="dropdown">
+            <button class="dropbtn" id="caini">Câini
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="caini">
+                <a href="#">Bishon</a>
+                <a href="#">Tomberoniez</a>
+                <a href="#">Pug</a>
+                <a href="#">Ciobanesc</a>
+                <a href="#">Altele</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Pisici
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Egiptene</a>
+                <a href="#">Romanesti</a>
+                <a href="#">Italiene</a>
+                <a href="#">Altele</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Rozătoare
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Hamsteri</a>
+                <a href="#">Porcușori de Guineea</a>
+                <a href="#">Șoricei</a>
+                <a href="#">Altele</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Păsări
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Papagali</a>
+                <a href="#">Găini</a>
+                <a href="#">Porumbei</a>
+                <a href="#">Altele</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Pești & Reptile
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Clown Fish</a>
+                <a href="#">Broasca Țestoasa</a>
+                <a href="#">Iguana</a>
+                <a href="#">Altele</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Alte Mamifere
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Tigru Bengalez</a>
+                <a href="#">Purcel Vietnamez</a>
+                <a href="#">Maimuțe</a>
+                <a href="#">Altele</a>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="footer">
+    <p>Toate Drepturile Rezervate: Dumea Cristian Pestisor si Matasel Andrei </p>
+</div>
 </body>
 </html>
