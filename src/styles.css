@@ -198,6 +198,7 @@ li a:hover:not(.active) {
 .dropdown {
     float: left;
     overflow: hidden;
+
 }
 
 .dropdown .dropbtn {
@@ -209,11 +210,13 @@ li a:hover:not(.active) {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    width: 150px;
 }
 
 .navbar2 {
     overflow: hidden;
     background-color: #333;
+    width: 900px;
 }
 
 .navbar2 a {
