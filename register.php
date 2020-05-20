@@ -1,3 +1,11 @@
+<?php
+// Start the session
+session_start();
+
+// Set session variables
+$_SESSION["from_page"] = "register";
+
+?>
 <html lang="en-Us">
 <head>
     <meta charset="utf-8">
@@ -10,7 +18,7 @@
 <div id="login">
     <fieldset>
         <h1><strong>Inregistrare:</strong></h1>
-        <form onSubmit = "return checkPassword(this)" action="src/register.php" method="post">
+        <form onSubmit = "return checkPassword(this)" action="index.php" method="post">
             <p><input type="text" required value="" name="nume" placeholder="Nume"></p>
             <p><input type="text" required value="" name="prenume" placeholder="Prenume"></p>
             <p><input type="text" required value="" name="email" placeholder="Email"></p>
