@@ -1,33 +1,9 @@
 <?php
-// Start the session
 session_start();
-$state = $_SESSION["from_page"];
-if ($state == "register"){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "aplicatii_internet";
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
-// Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    $nume = $_POST["nume"];
-    $prenume = $_POST["prenume"];
-    $email = $_POST["email"];
-    $adresa = $_POST["adresa"];
-    $telefon = $_POST["telefon"];
-    $parola = $_POST["password1"];
-    $valori =
-    $sql = "INSERT INTO aplicatii_internet.utilizatori (Nume, Prenume, email, Adresa, telefon, Parola) VALUES (\"$nume\", \"$prenume\", \"$email\", \"$adresa\", \"$telefon\", \"$parola\")";
-
-    if (mysqli_query($conn, $sql)) {
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+} else {
+    header("Location: login.php");
 }
 ?>
 <!DOCTYPE html>
@@ -43,8 +19,8 @@ if ($state == "register"){
 			background-size: cover;'>
 
 <div class="topnav">
-    <a href="index.html">Home</a>
-    <a href="#" style="float:right" >Contul meu</a>
+    <a href="index.php">Home</a>
+    <a href="login.php" style="float:right" >Bun venit, <?php echo $_SESSION['username']?>!</a>
     <div class="search-container">
         <form>
             <input type="text" placeholder="Search.." name="search">
@@ -63,11 +39,10 @@ if ($state == "register"){
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="caini.html">Bishon</a>
-                <a href="caini.html">Tomberoniez</a>
-                <a href="caini.html">Pug</a>
-                <a href="caini.html">Ciobanesc</a>
-                <a href="caini.html">Altele</a>
+                <a href="index.php?specia=Caine&rasa=Bichon">Bichon</a>
+                <a href="index.php?specia=Caine&rasa=Tomberoniez">Tomberoniez</a>
+                <a href="index.php?specia=Caine&rasa=Pug">Pug</a>
+                <a href="index.php?specia=Caine&rasa=Ciobanesc">Ciobanesc</a>
             </div>
         </div>
         <div class="dropdown">
@@ -75,10 +50,9 @@ if ($state == "register"){
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="pisici1.html">Egiptene</a>
-                <a href="pisici1.html">Romanesti</a>
-                <a href="pisici1.html">Italiene</a>
-                <a href="pisici1.html">Altele</a>
+                <a href="index.php?specia=Pisica&rasa=Egipteana">Egiptene</a>
+                <a href="index.php?specia=Pisica&rasa=Romaneasca">Romanesti</a>
+                <a href="index.php?specia=Pisica&rasa=Italiana">Italiene</a>
             </div>
         </div>
         <div class="dropdown">
@@ -86,10 +60,9 @@ if ($state == "register"){
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="rozatoare.html">Hamsteri</a>
-                <a href="rozatoare.html">Porcușori de Guineea</a>
-                <a href="rozatoare.html">Șoricei</a>
-                <a href="rozatoare.html">Altele</a>
+                <a href="index.php?specia=Rozatoare&rasa=Hamster">Hamsteri</a>
+                <a href="index.php?specia=Rozatoare&rasa=Porcusor">Porcușori de Guineea</a>
+                <a href="index.php?specia=Rozatoare&rasa=Soricel">Șoricei</a>
             </div>
         </div>
         <div class="dropdown">
@@ -97,21 +70,19 @@ if ($state == "register"){
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="pasari.html">Papagali</a>
-                <a href="pasari.html">Găini</a>
-                <a href="pasari.html">Porumbei</a>
-                <a href="pasari.html">Altele</a>
+                <a href="index.php?specia=Pasari&rasa=Papagal">Papagali</a>
+                <a href="index.php?specia=Pasari&rasa=Gaina">Găini</a>
+                <a href="index.php?specia=Pasari&rasa=Porumbel">Porumbei</a>
             </div>
         </div>
         <div class="dropdown">
             <button class="dropbtn">Pești&Reptile
-<i class="fa fa-caret-down"></i>
+                <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="pesti.html">Clown Fish</a>
-                <a href="pesti.html">Broasca Țestoasa</a>
-                <a href="pesti.html">Iguana</a>
-                <a href="pesti.html">Altele</a>
+                <a href="index.php?specia=Pesti&rasa=Nemo">Clown Fish</a>
+                <a href="index.php?specia=Pesti&rasa=Broasca">Broasca Țestoasa</a>
+                <a href="index.php?specia=Pesti&rasa=Iguana">Iguana</a>
             </div>
         </div>
         <div class="dropdown">
@@ -119,69 +90,74 @@ if ($state == "register"){
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="pesti.html">Tigru Bengalez</a>
-                <a href="pesti.html">Purcel Vietnamez</a>
-                <a href="pesti.html">Maimuțe</a>
-                <a href="pesti.html">Altele</a>
+                <a href="index.php?specia=Altele&rasa=Tigru">Tigru Bengalez</a>
+                <a href="index.php?specia=Altele&rasa=Purcel">Purcel Vietnamez</a>
+                <a href="index.php?specia=Altele&rasa=Maimuta">Maimuțe</a>
             </div>
         </div>
     </div>
-    <table  style="padding-bottom:50px; width: 100%" >
-        <tbody>
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "aplicatii_internet";
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    if(isset($_GET['specia']) && isset($_GET['rasa'])) {
+        $specia = $_GET['specia'];
+        $rasa = $_GET['rasa'];
+        $sql = "SELECT * FROM `animale` WHERE `specia`=\"$specia\" AND `rasa`=\"$rasa\"";
+    }
+    else
+    {
+        $sql = "SELECT * FROM `animale`";
+    }
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        $iterator = 0
+        ?>
+        <table style="padding-bottom:50px; width: 100%">
+            <tbody>
             <tr>
+                <?php
+                while($row = mysqli_fetch_assoc($result))
+                {
+                ?>
                 <td class="table-element">
-                    <img class='announce-image' src="Data\c3.jpg"></img>
-                    <p class="announce-text" >Rasa:   Labrador </p>
-                    <p class="announce-text" >Varsta: 7 luni</p>
-                    <p class="announce-text" >Pret:   300</p>
-                    <p class="announce-text" >Gen:    Mascul</p>
-                    <a href="bichon.html">Mai multe detalii</a>
+                    <img class='announce-image' src="<?php echo $row["poza"]?>"></img>
+                    <p class="announce-text">Specia: <?php echo $row["specia"]?> </p>
+                    <p class="announce-text">Rasa: <?php echo $row["rasa"]?> </p>
+                    <p class="announce-text">Varsta: <?php echo $row["varsta"]?></p>
+                    <p class="announce-text">Gen: <?php echo $row["gen"]?></p>
+                    <a href="individual.php?specia=<?php echo $row["specia"]?>&rasa=<?php echo $row["rasa"]?>&gen=<?php echo $row["gen"]?>&sanatate=<?php echo $row["sanatate"]?>&dresaj=<?php echo $row["dresaj"]?>&descriere=<?php echo $row["descriere"]?>&poza=<?php echo $row["poza"]?>&varsta=<?php echo $row["varsta"]?>">Mai multe detalii</a>
                 </td>
-                <td class="table-element">
-                    <img class='announce-image' src="Data\p2.jpg"></img>
-                    <p class="announce-text" >Rasa:     Pisica romaneasca </p>
-                    <p class="announce-text" >Varsta:   1 an</p>
-                    <p class="announce-text" >Pret :     80</p>
-                    <p class="announce-text" >Gen :      Mascul</p>
-                    <a href="bichon.html">Mai multe detalii</a>
-                </td>
-                <td class="table-element">
-                    <img class='announce-image' src="Data\p3.jpg"></img>
-                    <p class="announce-text" >Rasa :  Pisica Italiana </p>
-                    <p class="announce-text" >Varsta: 10 luni</p>
-                    <p class="announce-text" >Pret:  120</p>
-                    <p class="announce-text" >Gen:   Femela</p>
-                    <a href="bichon.html">Mai multe detalii</a>
-                </td>
+                <?php
+                    $iterator = $iterator + 1;
+                    if ($iterator % 3 == 0){
+                ?>
             </tr>
             <tr>
-                <td class="table-element">
-                    <img class='announce-image' src="Data\nemo.jpg"></img>
-                    <p class="announce-text" >Rasa : Clown (Nemo)</p>
-                    <p class="announce-text" >Varsta: 2 luni</p>
-                    <p class="announce-text" >Pret: 20</p>
-                    <p class="announce-text" >Gen: Mascul</p>
-                    <a href="bichon.html">Mai multe detalii</a>
-                </td>
-                <td class="table-element">
-                    <img class='announce-image' src="Data\gaina.jpg"></img>
-                    <p class="announce-text" >Rasa : Lohmann</p>
-                    <p class="announce-text" >Varsta: 4 zile</p>
-                    <p class="announce-text" >Pret: 5</p>
-                    <p class="announce-text" >Gen: Femela</p>
-                    <a href="bichon.html">Mai multe detalii</a>
-                </td>
-                <td class="table-element">
-                    <img class='announce-image' src="Data\c4.jpg"></img>
-                    <p class="announce-text" >Rasa : Pug</p>
-                    <p class="announce-text" >Varsta: 3 saptamani</p>
-                    <p class="announce-text" >Pret: 150</p>
-                    <p class="announce-text" >Gen: Femela</p>
-                    <a href="bichon.html">Mai multe detalii</a>
-                </td>
+                        <?php
+                    }
+                }
+                while ($iterator % 3 != 0){
+                        ?>
+                    <td class="table-element">
+                    </td>
+                    <?php
+                    $iterator = $iterator + 1;
+                }
+                ?>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+        <?php
+    }
+    ?>
 </div>
 
 <div class="footer">
