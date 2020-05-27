@@ -42,11 +42,10 @@ $varsta = $_GET['varsta'];
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="caini.html">Bishon</a>
-                <a href="caini.html">Tomberoniez</a>
-                <a href="caini.html">Pug</a>
-                <a href="caini.html">Ciobanesc</a>
-                <a href="caini.html">Altele</a>
+                <a href="index.php?specia=Caine&rasa=Bichon">Bichon</a>
+                <a href="index.php?specia=Caine&rasa=Tomberoniez">Tomberoniez</a>
+                <a href="index.php?specia=Caine&rasa=Pug">Pug</a>
+                <a href="index.php?specia=Caine&rasa=Ciobanesc">Ciobanesc</a>
             </div>
         </div>
         <div class="dropdown">
@@ -54,10 +53,9 @@ $varsta = $_GET['varsta'];
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="pisici1.html">Egiptene</a>
-                <a href="pisici1.html">Romanesti</a>
-                <a href="pisici1.html">Italiene</a>
-                <a href="pisici1.html">Altele</a>
+                <a href="index.php?specia=Pisica&rasa=Egipteana">Egiptene</a>
+                <a href="index.php?specia=Pisica&rasa=Romaneasca">Romanesti</a>
+                <a href="index.php?specia=Pisica&rasa=Italiana">Italiene</a>
             </div>
         </div>
         <div class="dropdown">
@@ -65,10 +63,9 @@ $varsta = $_GET['varsta'];
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="rozatoare.html">Hamsteri</a>
-                <a href="rozatoare.html">Porcușori de Guineea</a>
-                <a href="rozatoare.html">Șoricei</a>
-                <a href="rozatoare.html">Altele</a>
+                <a href="index.php?specia=Rozatoare&rasa=Hamster">Hamsteri</a>
+                <a href="index.php?specia=Rozatoare&rasa=Porcusor">Porcușori de Guineea</a>
+                <a href="index.php?specia=Rozatoare&rasa=Soricel">Șoricei</a>
             </div>
         </div>
         <div class="dropdown">
@@ -76,10 +73,9 @@ $varsta = $_GET['varsta'];
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="pasari.html">Papagali</a>
-                <a href="pasari.html">Găini</a>
-                <a href="pasari.html">Porumbei</a>
-                <a href="pasari.html">Altele</a>
+                <a href="index.php?specia=Pasari&rasa=Papagal">Papagali</a>
+                <a href="index.php?specia=Pasari&rasa=Gaina">Găini</a>
+                <a href="index.php?specia=Pasari&rasa=Porumbel">Porumbei</a>
             </div>
         </div>
         <div class="dropdown">
@@ -87,10 +83,9 @@ $varsta = $_GET['varsta'];
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="pesti.html">Clown Fish</a>
-                <a href="pesti.html">Broasca Țestoasa</a>
-                <a href="pesti.html">Iguana</a>
-                <a href="pesti.html">Altele</a>
+                <a href="index.php?specia=Pesti&rasa=Nemo">Clown Fish</a>
+                <a href="index.php?specia=Pesti&rasa=Broasca">Broasca Țestoasa</a>
+                <a href="index.php?specia=Pesti&rasa=Iguana">Iguana</a>
             </div>
         </div>
         <div class="dropdown">
@@ -98,10 +93,9 @@ $varsta = $_GET['varsta'];
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="pesti.html">Tigru Bengalez</a>
-                <a href="pesti.html">Purcel Vietnamez</a>
-                <a href="pesti.html">Maimuțe</a>
-                <a href="pesti.html">Altele</a>
+                <a href="index.php?specia=Altele&rasa=Tigru">Tigru Bengalez</a>
+                <a href="index.php?specia=Altele&rasa=Purcel">Purcel Vietnamez</a>
+                <a href="index.php?specia=Altele&rasa=Maimuta">Maimuțe</a>
             </div>
         </div>
     </div>
